@@ -1,22 +1,20 @@
 {
     "name": "bwood/ucbdrupal",
-    "description": "UCB Drupal site administration on Pantehon",
-    "require": {
-        "symfony/console": "2.6.*",
-        "pimple/pimple": "3.0.*",
-        "symfony/yaml": "2.6.*",
-        "phpunit/phpunit": "~4.5"
-    },
+    "description": "UC Berkeley IST Drupal CLI",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Brian Wood",
-            "email": "bwood@berkeley.edu"
-        }
-    ],
+	"require": {
+	    "symfony/console":                 "2.*",
+	    "symfony/filesystem":              "2.*",
+	    "symfony/finder":                  "2.*",
+	    "symfony/yaml":                    "2.*",
+	    "symfony/config":                  "2.*",
+	    "symfony/dependency-injection":    "2.*"
+	},  
+	
     "autoload": {
-        "psr-4": {
-            "bwood\\ConsoleApp\\": "src/"
-        }
+        "psr-0": {
+            "IstDrupalApp": "src/",
+            "Skel": "src/"
+         }
     }
 }

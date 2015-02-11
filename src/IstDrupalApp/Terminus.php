@@ -1,5 +1,5 @@
 <?php
-namespace bwood\ConsoleApp;
+namespace IstDrupalApp;
 
 class Terminus {
 
@@ -9,7 +9,13 @@ class Terminus {
     'patch' => 4,
   );
 
-  public function __construct($file) {
+  public function __construct() {
+    if (!$this->checkTerminusCommand()) {
+      throw new \Exception('The command terminus was not found on this system.');
+    }
+    if (!$this->checkTerminusVersion()) {
+      throw new \Exception(sprintf('A version of terminus greater than %d.%d.%d is required.', $this->terminusVersion['major'], $this->terminusVersion['minor'], $this->terminusVersion['patch']));
+    }
 
   }
 

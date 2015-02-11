@@ -1,0 +1,9 @@
+imports:
+- { resource: build.yml }
+- { resource: services.yml }
+
+parameters:
+  application:
+    name:         IST Druapl CLI
+    slug:         istdrupal    # Used to name the built phar
+    description:  "CLI app for IST Drupal administrative tasks."

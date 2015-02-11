@@ -1,7 +1,6 @@
 <?php
-namespace bwood\ConsoleApp\Command;
+namespace IstDrupalApp\Console\Command;
 
-//use bwood\ConsoleApp\Greeter;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
